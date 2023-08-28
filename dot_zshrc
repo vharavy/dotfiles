@@ -1,4 +1,12 @@
+export PATH="$HOME/homebrew/bin:$HOME/homebrew/sbin:$PATH"
+
+fpath+=~/.zsh.completions
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="/Users/vharavy/homebrew/opt/llvm/bin:$PATH"
+source "$HOME/.cargo/env"
+
 alias ls="ls --color=always"
 alias bat="bat --theme \"Solarized (light)\""
+
 eval "$(starship init zsh)"

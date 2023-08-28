@@ -1,5 +1,10 @@
 theme="solarized_light"
 
+[editor]
+true-color=true
+bufferline="always"
+mouse=true
+
 [keys.normal]
 n="move_char_left"
 e="move_line_down"
