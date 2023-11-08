@@ -523,7 +523,16 @@ hints:
        enabled: true
        mods: None
      binding:
-       key: U
+       key: L
+       mods: Control|Shift
+#   - regex: "\\b([tTdDpP]\\d+)\\b"
+   - regex: "[tTdDpP]\\d+"
+     action: Copy
+     mouse:
+       enabled: true
+       mods: None
+     binding:
+       key: M
        mods: Control|Shift
 
 # Mouse bindings
