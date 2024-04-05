@@ -1,4 +1,4 @@
-import = ["/Users/vitali/.config/alacritty/themes/solarized_light.toml"]
+import = ["~/.config/alacritty/themes/solarized_light.toml"]
 live_config_reload = true
 
 [cursor.style]
