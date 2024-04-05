@@ -1,10 +1,17 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
-keymap.set("n", "n", "h", opts) -- Move Left
-keymap.set("n", "o", "l", opts) -- Move Right
-keymap.set("n", "e", "j", opts) -- Move Down
-keymap.set("n", "i", "k", opts) -- Move Up
+keymap.set({"n", "v"}, "n", "h", opts) -- Move Left
+keymap.set({"n", "v"}, "o", "l", opts) -- Move Right
+keymap.set({"n", "v"}, "e", "j", opts) -- Move Down
+keymap.set({"n", "v"}, "i", "k", opts) -- Move Up
+
+keymap.set({"n", "v"}, "gn", "0", opts) -- Beginning of the current line
+keymap.set({"n", "v"}, "go", "$", opts) -- End of the current line.
+keymap.set({"n", "v"}, "ge", "G", opts) -- Last line of the file.
+keymap.set({"n", "v"}, "gi", "gg", opts) -- First line of the file.
+
+keymap.set({"n", "v"}, "gm", "^", opts) -- First non-whitespace character of the current line
 
 keymap.set("n", "h", "i", opts) -- Insert at Cursor
 keymap.set("n", "H", "I", opts) -- Insert at BOL
@@ -18,5 +25,5 @@ keymap.set("n", "<C-e>", "<C-w>j", opts) -- Navigate Down
 keymap.set("n", "<C-i>", "<C-w>k", opts) -- Navigate Up
 
 -- Window Management
-mapkey("<leader>sv", "vsplit", "n") -- Split Vertically
-mapkey("<leader>sh", "split", "n") -- Split Horizontally
+keymap.set("n", "<leader>sv", "vsplit", opts) -- Split Vertically
+keymap.set("n", "<leader>sh", "split", opts) -- Split Horizontally
