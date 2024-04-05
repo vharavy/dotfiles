@@ -28,3 +28,16 @@ keymap.set("n", "<C-i>", "<C-w>k", opts) -- Navigate Up
 keymap.set("n", "<leader>sv", ":vsplit<CR>", opts) -- Split Vertically
 keymap.set("n", "<leader>sh", ":split<CR>", opts) -- Split Horizontally
 
+-- Nvim Tree
+keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>", opts)
+
+-- Indenting
+keymap.set("v", "<", "<gv")
+keymap.set("v", ">", ">gv")
+
+local api = vim.api
+
+-- Comments
+api.nvim_set_keymap("n", "<C-_>", "gtc", { noremap = false })
+api.nvim_set_keymap("v", "<C-_>", "goc", { noremap = false })
+

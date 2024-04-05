@@ -15,8 +15,4 @@ require("config.globals")
 require("config.options")
 require("config.keymaps")
 
-require("lazy").setup("plugins", {
-  install = {
-    colorscheme = { "solarized" },
-  },
-})
+require("lazy").setup("plugins")
