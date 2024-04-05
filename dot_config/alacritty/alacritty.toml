@@ -8,11 +8,19 @@ shape = "Beam"
 size = 20.0
 
 [font.bold]
-family = "D2CodingLigature Nerd Font Mono"
-style = "Bold"
+family = "IosevkaTerm Nerd Font"
+style = "Semibold"
+
+[font.bold_italic]
+family = "IosevkaTerm Nerd Font"
+style = "Semibold Italic"
+
+[font.italic]
+family = "IosevkaTerm Nerd Font"
+style = "Regular Italic"
 
 [font.normal]
-family = "D2CodingLigature Nerd Font Mono"
+family = "IosevkaTerm Nerd Font"
 style = "Regular"
 
 [hints]
