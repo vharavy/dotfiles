@@ -25,5 +25,6 @@ keymap.set("n", "<C-e>", "<C-w>j", opts) -- Navigate Down
 keymap.set("n", "<C-i>", "<C-w>k", opts) -- Navigate Up
 
 -- Window Management
-keymap.set("n", "<leader>sv", "vsplit", opts) -- Split Vertically
-keymap.set("n", "<leader>sh", "split", opts) -- Split Horizontally
+keymap.set("n", "<leader>sv", ":vsplit<CR>", opts) -- Split Vertically
+keymap.set("n", "<leader>sh", ":split<CR>", opts) -- Split Horizontally
+
