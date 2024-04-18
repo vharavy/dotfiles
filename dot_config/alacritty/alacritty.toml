@@ -5,23 +5,23 @@ live_config_reload = true
 shape = "Beam"
 
 [font]
-size = 20.0
+size = 16.0
 
 [font.bold]
 family = "IosevkaTerm Nerd Font"
-style = "Semibold"
+style = "Bold"
 
 [font.bold_italic]
 family = "IosevkaTerm Nerd Font"
-style = "Semibold Italic"
+style = "Bold Italic"
 
 [font.italic]
 family = "IosevkaTerm Nerd Font"
-style = "Regular Italic"
+style = "Medium Italic"
 
 [font.normal]
 family = "IosevkaTerm Nerd Font"
-style = "Regular"
+style = "Medium"
 
 [hints]
 alphabet = "jfkdls;ahgurieowpq"
