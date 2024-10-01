@@ -4,6 +4,7 @@ import {
   rule,
   withCondition,
   ifInputSource,
+  ifKeyboardType,
   writeToProfile,
 } from "https://deno.land/x/karabinerts@1.30.0/deno.ts";
 
@@ -33,12 +34,13 @@ const colemak_rule = rule(
     map('l', { optional: 'any' }).to('i'),
     map('semicolon', { optional: 'any' }).to('o'),
 
-    map('grave_accent_and_tilde', { optional: 'any' }).to('z'),
+    map('grave_accent_and_tilde', { optional: 'any' }).to('z').condition(ifKeyboardType('ANSI')),
     map('z', { optional: 'any' }).to('x'),
     map('x', { optional: 'any' }).to('c'),
     map('c', { optional: 'any' }).to('d'),
     map('v', { optional: 'any' }).to('v'),
-    map('b', { optional: 'any' }).to('grave_accent_and_tilde'),
+    map('b', { optional: 'any' }).to('grave_accent_and_tilde').condition(ifKeyboardType('ANSI')),
+    map('b', { optional: 'any' }).to('z').condition(ifKeyboardType('ANSI').unless()),
     map('n', { optional: 'any' }).to('k'),
     map('m', { optional: 'any' }).to('h'),
     //map(',', { optional: 'any' }).to(','),
