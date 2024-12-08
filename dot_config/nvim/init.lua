@@ -149,7 +149,7 @@ require("lazy").setup({
 	    config = function ()
 		local configs = require("nvim-treesitter.configs")
 		configs.setup({
-		    ensure_installed = { "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline"  },
+		    ensure_installed = { "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "zig" },
 		    modules = {},
 		    auto_install = false,
 		    sync_install = false,
@@ -179,6 +179,7 @@ require("lazy").setup({
 	    config = function()
 		local lspconfig = require('lspconfig')
 		lspconfig.lua_ls.setup{}
+		lspconfig.zls.setup{}
 	    end,
 	},
     },
