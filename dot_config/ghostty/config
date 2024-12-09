@@ -1,12 +1,12 @@
-command = /run/current-system/sw/bin/fish
 shell-integration = fish
 shell-integration-features = true
 
 font-family = "ZedMono NFM"
+font-style = "Medium"
+font-style-italic = "Medium Italic"
 font-style-bold = "Bold"
-font-style-italic = "Italic"
 font-style-bold-italic = "Bold Italic"
-font-size = 18
+font-size = 20
 
 theme = catppuccin-latte
 window-theme = light
