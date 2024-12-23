@@ -10,3 +10,6 @@ font-size = 20
 
 theme = catppuccin-latte
 window-theme = light
+
+keybind = global:cmd+`=toggle_quick_terminal
+
