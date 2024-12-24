@@ -52,7 +52,7 @@ vim.opt.timeoutlen = 300
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
--- Sets how neovim will display certain whitespace characters in the editor.
+-- Sets how Neovim will display certain white space characters in the editor.
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
@@ -69,6 +69,10 @@ vim.opt.scrolloff = 10
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.expandtab = false
+
+-- Spelling
+vim.opt.spelllang = 'en_gb'
+vim.opt.spell = true
 
 -- [[ Basic Keymaps ]]
 
@@ -171,6 +175,7 @@ require('lazy').setup({
                         'markdown_inline',
                         'zig',
                         'nix',
+                        'swift',
                     },
                     modules = {},
                     auto_install = false,
@@ -445,6 +450,10 @@ require('lazy').setup({
                 lspconfig.zls.setup({
                     capabilities = capabilities,
                 })
+                -- Markdown
+                lspconfig.marksman.setup({
+                    capabilities = capabilities,
+                })
                 -- Swift
                 lspconfig.sourcekit.setup({
                     capabilities = vim.tbl_deep_extend('force', capabilities, {
@@ -523,6 +532,14 @@ require('lazy').setup({
             config = function()
                 require('mini.ai').setup()
                 require('mini.surround').setup()
+            end,
+        },
+        {
+            'folke/which-key.nvim',
+            config = function()
+                require('which-key').setup({
+                    delay = 1000,
+                })
             end,
         },
     },
