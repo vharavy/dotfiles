@@ -1,5 +1,10 @@
 -- [[ Basic Options ]]
 
+-- GUI Configuration
+if vim.g.neovide then
+    vim.o.guifont = 'ZedMono NFM:h18'
+end
+
 -- Set <space> as the leader key
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -471,7 +476,10 @@ require('lazy').setup({
             'saghen/blink.cmp',
             version = '*',
             opts = {
-                keymap = { preset = 'default' },
+                keymap = {
+                    preset = 'default',
+                    ['C-Space'] = {},
+                },
                 appearance = {
                     nerd_font_variant = 'mono',
                 },
@@ -539,6 +547,17 @@ require('lazy').setup({
             config = function()
                 require('which-key').setup({
                     delay = 1000,
+                })
+            end,
+        },
+        {
+            'nvim-lualine/lualine.nvim',
+            dependencies = { 'nvim-tree/nvim-web-devicons' },
+            config = function()
+                require('lualine').setup({
+                    options = {
+                        theme = 'catppuccin-latte',
+                    },
                 })
             end,
         },
