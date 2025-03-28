@@ -570,7 +570,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "grave_accent_and_tilde"
+                    "key_code": "left_shift"
                   }
                 ],
                 "conditions": [
@@ -673,6 +673,32 @@
                     ]
                   }
                 ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "non_us_backslash",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "grave_accent_and_tilde"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "input_source_unless",
+                    "input_sources": [
+                      {
+                        "language": "ru"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -733,7 +759,10 @@
           "ignore": true
         }
       ],
-      "name": "No Modifications"
+      "name": "No Modifications",
+      "virtual_hid_keyboard": {
+        "keyboard_type_v2": "iso"
+      }
     }
   ]
 }
